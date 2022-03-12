@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@Scripts.Render("~/Scripts/jquery-1.10.2.js")
+@Scripts.Render("~/Scripts/Charts.bundle.min.js")
+
+<h2>Stock Level</h2>
+
+<canvas id="myChart" class="mychart" width="80%" height="40"></canvas>
+<script>
+    $.get("/Admin/Stock/Chart", function (response) {
+    var ctx = document.getElementById("myChart");
+    var data = {
+        labels: response[2],
+        datasets: [response[0], response[1]]
+    }
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            },
+        };
+        var myChart = new Chart(ctx, config);
+});
+</script>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="287b4945ea4b4770a1b781bbc4e092a6" Name="Diagram1">
+        <EntityTypeShape EntityType="ElectronicsStoreDbModel.Customer" Width="1.5" PointX="0.625" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicsStoreDbModel.Order_Products" Width="1.5" PointX="4.625" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicsStoreDbModel.Order" Width="1.5" PointX="2.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicsStoreDbModel.Product" Width="1.5" PointX="2.625" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicsStoreDbModel.ShoppingCartData" Width="1.5" PointX="6.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicsStoreDbModel.Supplier" Width="1.5" PointX="0.5" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="ElectronicsStoreDbModel.FK_Orders_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="ElectronicsStoreDbModel.FK_Order_Products_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="ElectronicsStoreDbModel.FK_Order_Products_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="ElectronicsStoreDbModel.FK_Products_Suppliers" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ElectronicsStoreDbModel.AspNetRole" Width="1.5" PointX="5.625" PointY="4" />
+        <EntityTypeShape EntityType="ElectronicsStoreDbModel.AspNetUserClaim" Width="1.875" PointX="9.375" PointY="4" />
+        <EntityTypeShape EntityType="ElectronicsStoreDbModel.AspNetUserLogin" Width="1.875" PointX="9.5" PointY="6.25" />
+        <EntityTypeShape EntityType="ElectronicsStoreDbModel.AspNetUser" Width="1.5" PointX="7.5" PointY="4" />
+        <AssociationConnector Association="ElectronicsStoreDbModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="ElectronicsStoreDbModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="ElectronicsStoreDbModel.AspNetUserRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
